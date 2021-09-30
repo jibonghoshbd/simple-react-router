@@ -6,7 +6,6 @@ import Friends from './Components/Friends/Friends';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Components/Header/Header';
-import Friend from './Components/Friend/Friend';
 import FriendDetail from './Components/FriendDetail/FriendDetail';
 
 function App() {
