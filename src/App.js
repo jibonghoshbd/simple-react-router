@@ -4,31 +4,37 @@ import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Friends from './Components/Friends/Friends';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './Components/Header/Header';
+import Friend from './Components/Friend/Friend';
+import FriendDetail from './Components/FriendDetail/FriendDetail';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router>
+        <Header />
         <Switch>
-          <Route path="/home">
+          <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route path="/friends">
-            <Friends></Friends>
+          <Route path="/home">
+            <Home></Home>
           </Route>
           <Route path="/about">
             <About></About>
           </Route>
-          <Route exact path="/">
-            <Home></Home>
+          <Route path="/friends">
+            <Friends></Friends>
           </Route>
-          <Route>
+          <Route path="/friend/:friendId">
+            <FriendDetail></FriendDetail>
+          </Route>
+          <Route path="*">
             <PageNotFound></PageNotFound>
           </Route>
         </Switch>
-      </BrowserRouter>
-
+      </Router>
     </div>
   );
 }

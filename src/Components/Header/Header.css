@@ -1,0 +1,10 @@
+.nav-area{
+    background-color: black;
+    padding: 10px;
+}
+.nav-area a {
+    margin-right: 15px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
